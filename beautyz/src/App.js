@@ -1,12 +1,14 @@
 
 import './App.css';
 import Adminnavbar from './Components/Admin/Adminnavbar';
-import Login from './Components/Admin/Login';
+import Navbar from './Components/Users/Navbar';
+import Landing from './Components/Users/Landing';
 function App() {
   return (
     <div className="App">
-      <Adminnavbar  />
-      <Login/>
+      {/* <Adminnavbar  /> */}
+      <Navbar/>
+      <Landing/>
     </div>
   );
 }
