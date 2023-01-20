@@ -1,0 +1,23 @@
+.mainDiv{
+    position: fixed;
+    display: flex;
+    width:100%;
+    height: 40px !important;
+    column-gap: 60%;
+    background-size: cover !important;
+    background-color: #fc2779;
+    background-image: url(https://adn-static1.nykaa.com/media/wysiwyg/2021/common-strip.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;    
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000000;
+    top: 0;
+    
+}
+@media only screen and (max-width: 843px) {
+    .mainDiv{
+        column-gap: 2px;
+    }
+  }
+
