@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-
-const BrandsPopup = styled.div`
+// import { Link } from 'react-router-dom'
+// import ProductPage from '../../ProductPage'
+import {Button} from "@chakra-ui/react"
+import { useNavigate } from 'react-router-dom'
+ const BrandsPopup = styled.div`
 width:65%;
 display:flex;
 justify-content:center;
@@ -18,13 +21,20 @@ background-color:#fafafa;
 }
 `
 
+
+
 const Brands = () => {
+    const navigate=useNavigate()
+    const handleClick=()=>{
+        navigate("/lakme")
+    }
     return (
         <>
             <BrandsPopup>
                 <div className='style'>
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/2019/Maybelline1211.png" alt="" />
-                    <img src="https://adn-static2.nykaa.com/media/wysiwyg/lakme_mega_menu_header.png" alt="" />
+                    <Button onClick={handleClick}><img src="https://adn-static2.nykaa.com/media/wysiwyg/lakme_mega_menu_header.png" alt="" /></Button>
+                    
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/For-Nykaa-Megamenu-New.png" alt="" />
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/2019/lorealparis.png" alt="" />
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/2020/BrandslogoMenubar/Huda.png" alt="" />

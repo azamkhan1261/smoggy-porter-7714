@@ -5,8 +5,21 @@ import { FaRegUser } from 'react-icons/fa';
 import { RiGift2Line } from 'react-icons/ri';
 import { BsHandbag } from 'react-icons/bs';
 import NavbarPopUpComponents from './NavComponents/NavbarPopUpComponents';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,NavLink} from 'react-router-dom'
 // import {MuiDrawer} from '../../Product page/MuiDrawer'
+
+
+const links=[
+  {path:"/", title:"HomePage"},
+  {path:"/lakme", title:"lakme"},
+  // {path:"/login", title:"Login"}
+]
+
+    
+
+
+
+
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -38,6 +51,7 @@ const Navbar = () => {
       <div className={style.container}>
         <div className={style.card}>
           <div>
+
             <img
               style={{cursor:"pointer", height:"50px"}}
               onClick={()=>navigate("/")}
@@ -46,6 +60,14 @@ const Navbar = () => {
               alt="Beautyz"
               
             />
+              {/* {links.map((link)=>(
+          <NavLink
+          key={link.path}
+          to={link.path}
+          >
+          {link.title}
+          </NavLink>
+      ))} */}
             <p>Categories</p>
             <p onMouseOver={() => hoverHandler("BRANDS")}>Brands</p>
             <p onMouseEnter={() => hoverHandler("LUXE")}>Luxe</p>
