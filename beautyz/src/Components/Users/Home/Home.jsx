@@ -127,7 +127,6 @@ function Home() {
     <div>
         <h1 className={styles.slider}>Best In Beauty</h1>
       <Carousel/>
-
       <div className={styles.banner}>
         <img
           src="https://images-static.nykaa.com/uploads/19367bb9-be89-428e-8892-e6f1ad9718f2.jpg?tr=w-2400,cm-pad_resize"
@@ -136,7 +135,6 @@ function Home() {
       </div>
       <h1 className={styles.bigheader}>HOT PINK SALE - COMING SOON!</h1>
       <div >
-
            <img
           className={styles.banner2}
           src="https://images-static.nykaa.com/uploads/618d58d6-cb47-4c1d-95dd-1abd3a5273b8.gif?tr=w-2400,cm-pad_resize"

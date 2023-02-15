@@ -5,7 +5,7 @@ import { UpperNav } from './UpperNav'
 const MainNavbar = () => {
   return (
     <div>
-        <UpperNav/>
+      <UpperNav/>
       <Navbar/>
       <SubNavbar/>
     </div>

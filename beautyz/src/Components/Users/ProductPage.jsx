@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Button, Box, Heading, Text, Image } from "@chakra-ui/react";
 
 import { FaRegHeart } from "react-icons/fa";
