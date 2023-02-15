@@ -16,7 +16,7 @@ import Fragrence from './Fragrence'
 
 const NavbarPopUpComponents = ({type}) => {
   return (
-    <Fade in={type} timeout={1000} >
+    <Fade in={type} timeout={10} >
     <div>
         {type==='BRANDS' && <Brands/>}
         {type==='LUXE' && <Luxe/>}
