@@ -77,6 +77,7 @@ const Navbar = () => {
           <div>
             <div className={style.inputContainer}>
               <input
+              
                 style={{position: "relative"}}
                 type="text"
                 className={style.input}

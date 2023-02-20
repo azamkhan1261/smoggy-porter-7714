@@ -4,6 +4,7 @@ import styled from 'styled-components'
 // import ProductPage from '../../ProductPage'
 // import {Button} from "@chakra-ui/react"
 // import { useNavigate } from 'react-router-dom'
+// import ProductPage from '../../ProductPage'
 import { Link } from 'react-router-dom'
  const BrandsPopup = styled.div`
 width:65%;
@@ -15,7 +16,6 @@ border-bottom-left-radius:5px;
 border-bottom-right-radius:5px;
 border:1px solid #e6dede;
 background-color:#fafafa;
-z-index:10000000;
 .style{
     display:grid;
     grid-template-columns: repeat(5,1fr);
@@ -36,15 +36,16 @@ const Brands = () => {
             <BrandsPopup>
                 <div className='style'>
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/2019/Maybelline1211.png" alt="" />
-                    <Link to='/lakme'>
-                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/lakme_mega_menu_header.png" alt="" />
-                    </Link>
-                    
-                       
+                  
+                        <Link to={"/lakme"}>
+                          <img src="https://adn-static2.nykaa.com/media/wysiwyg/lakme_mega_menu_header.png" alt="" />   
+                        </Link>
+  
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/For-Nykaa-Megamenu-New.png" alt="" />
-                    <img src="https://adn-static2.nykaa.com/media/wysiwyg/2019/lorealparis.png" alt="" />
+                    
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/2020/BrandslogoMenubar/Huda.png" alt="" />
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/2018/Brandslogo/FacesCanadaa.png" alt="" />
+                    <img src="https://adn-static2.nykaa.com/media/wysiwyg/2019/lorealparis.png" alt="" />
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/Header/mac.png" alt="" />
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/2020/BrandslogoMenubar/Huda.png" alt="" />
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/2018/Biotique_new.png" alt="" />

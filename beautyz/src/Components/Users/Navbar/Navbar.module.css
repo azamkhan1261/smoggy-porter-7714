@@ -1,6 +1,6 @@
 .container{
     position: fixed;
-    z-index: 10000;
+    z-index: 10000000;
     width: 100vw;
     margin-top: -60px;
     

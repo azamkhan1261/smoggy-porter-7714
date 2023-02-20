@@ -1,16 +1,16 @@
 import React from 'react'
-import Footer from '../Footer/Footer'
+// import Footer from '../Footer/Footer'
 import Home from './Home'
-import ScrollButton from './ScrollButton'
+// import ScrollButton from './ScrollButton'
 
 function HomePage() {
   return (
     <div >
         {/* <Navbar/> */}
        <Home/>
-        <Footer/>
+        {/* <Footer/> */}
 
-        <ScrollButton/>
+        {/* <ScrollButton/> */}
     </div>
   )
 }
