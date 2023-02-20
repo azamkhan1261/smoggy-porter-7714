@@ -7,8 +7,11 @@ import './App.css';
 import ScrollButton from './Components/Users/Home/ScrollButton';
 import HomePage from './Components/Users/Home/HomePage';
 import MainNavbar from './Components/Users/Navbar/MainNavbar';
-// import ProductPage from "./Components/Users/ProductPage"
-// import AllRoutes from './Components/Users/AllRoutes';
+import Footer from './Components/Users/Footer/Footer';
+import ProductPage from "./Components/Users/ProductPage"
+// import AllRoutes from './Components/Users/Navbar/AllRoutes';
+import {Routes,Route} from 'react-router-dom'
+import SingleProductPage from './Components/Users/SingleProductPage';
 function App() {
   return (
     <div className="App">
@@ -18,10 +21,16 @@ function App() {
       {/* <Carousel/> */}
      
       <MainNavbar/>
-      <HomePage/>
+     <Routes>
+
+      <Route path="/" element={<HomePage/>}>  </Route>
+      <Route path="/lakme" element={<ProductPage/>}></Route>
+      <Route path='/lakme/:id' element={<SingleProductPage/>}></Route>
+     </Routes>
+      <Footer/>
       <ScrollButton/>
-       {/* <AllRoutes/> */}
-      {/* <ProductPage/> */}
+        {/* <AllRoutes/> */}
+     
   
     </div>
   );
