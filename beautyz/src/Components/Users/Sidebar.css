@@ -1,9 +1,9 @@
 .sidebar {
     position: fixed;
     z-index: 100;
-    top: 0;
-    right: -300px;
-    width: 300px;
+    top: 70px;
+    right: -350px;
+    width: 350px;
     height: 100%;
     background-color: peru;
     transition: left 300ms ease-out;
@@ -11,16 +11,16 @@
   .sidebar.active {
     right: 0;
   }
-  .hamburger {
+  /* .hamburger {
     border: none;
     outline: 0;
     width: 50px;
     position: absolute;
     right: -50px;
     background-color: peru;
-  }
+  } */
   
-  .hamburger:after,
+  /* .hamburger:after,
   .hamburger:before,
   .hamburger div {
     background-color: #fff;
@@ -39,4 +39,4 @@
   }
   .sidebar.active .hamburger div {
     transform: scale(0);
-  }
+  } */

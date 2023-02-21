@@ -17,7 +17,7 @@ import { FaRegHeart } from "react-icons/fa";
 //     }
 //   }
 
-function ProductPage() {
+function Lakme() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState(false);
@@ -161,7 +161,7 @@ function ProductPage() {
                       <FaRegHeart />
                     </Button>
                     <Button colorScheme={"pink"} w={"200px"}>
-                      Add to Bag
+                      preview
                     </Button>
                   </Box>
                   </Link>
@@ -176,4 +176,4 @@ function ProductPage() {
   );
 }
 
-export default ProductPage;
+export default Lakme;
