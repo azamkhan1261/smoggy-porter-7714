@@ -40,6 +40,14 @@ const Brands = () => {
                         <Link to={"/lakme"}>
                           <img src="https://adn-static2.nykaa.com/media/wysiwyg/lakme_mega_menu_header.png" alt="" />   
                         </Link>
+
+                        <Link to={"/loreal"}>
+                          <img src="https://adn-static2.nykaa.com/media/wysiwyg/2019/lorealparis.png" alt="" />   
+                        </Link>
+
+                        <Link to={"/maybelline"}>
+                          <img src="https://adn-static2.nykaa.com/media/wysiwyg/2019/Maybelline1211.png" alt="" />   
+                        </Link>
   
                     <img src="https://adn-static2.nykaa.com/media/wysiwyg/For-Nykaa-Megamenu-New.png" alt="" />
                     
