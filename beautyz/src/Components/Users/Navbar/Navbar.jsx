@@ -15,11 +15,6 @@ const links=[
   // {path:"/login", title:"Login"}
 ]
 
-    
-
-
-
-
 
 const Navbar = () => {
   const navigate = useNavigate();
