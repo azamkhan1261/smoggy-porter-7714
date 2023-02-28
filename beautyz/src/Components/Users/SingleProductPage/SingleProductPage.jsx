@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Image, Heading, Text, Button, Box,Input } from "@chakra-ui/react";
+import { Image, Heading, Text, Button, Box, Input } from "@chakra-ui/react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { ADD } from "../../../redux/actions/Action";
 // const getData=async(id)=>{
 //   return fetch(`https://dark-lime-cockroach-hem.cyclic.app/lakme/${id}`).then((res)=>res.json());
 // }
 
 function SingleProductPage() {
+  const dispatch = useDispatch();
+  const send = (e) => {
+    // console.log(e);
+    dispatch(ADD(e));
+  };
+
   const [data, setData] = useState([]);
+  // const Data = data?.data;
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState(false);
   let params = useParams();
@@ -33,7 +42,7 @@ function SingleProductPage() {
       const response = await axios.get(
         `https://dark-lime-cockroach-hem.cyclic.app/lakme/${id}`
       );
-      console.log("response: ", response);
+      // console.log("response: ", response);
       setData(response);
       setLoading(false);
     } catch (error) {
@@ -83,29 +92,25 @@ function SingleProductPage() {
                 </Button>
               </Text>
 
-              <Text display={'flex'} justifyContent={'center'} fontSize={'20px'}>
-                Quantity : 
+              <Text
+                display={"flex"}
+                justifyContent={"center"}
+                fontSize={"20px"}
+              >
+                Quantity :
                 <div>
-                  <Button
-                    onClick={decNum}
-                  >
-                    -
-                  </Button>
+                  <Button onClick={decNum}>-</Button>
                 </div>
                 <Input
-                  w={'30px'}
-                  textAlign={'center'}
+                  w={"30px"}
+                  textAlign={"center"}
                   _disabled={true}
                   type="text"
                   value={num}
                   onChange={handleChange}
                 />
-                <div >
-                  <Button
-                    onClick={incNum}
-                  >
-                    +
-                  </Button>
+                <div>
+                  <Button onClick={incNum}>+</Button>
                 </div>
               </Text>
               <Heading className="ui brown block header">
@@ -118,7 +123,9 @@ function SingleProductPage() {
                 <div className="hidden content">
                   <i className="shop icon"></i>
                 </div>
-                <div className="visible content">Add to Cart</div>
+                <button onClick={send(data?.data)} className="visible content">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
