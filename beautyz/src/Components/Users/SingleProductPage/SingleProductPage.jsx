@@ -2,17 +2,21 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Image, Heading, Text, Button, Box, Input } from "@chakra-ui/react";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { ADD } from "../../../redux/actions/Action";
 // const getData=async(id)=>{
 //   return fetch(`https://dark-lime-cockroach-hem.cyclic.app/lakme/${id}`).then((res)=>res.json());
 // }
 
 function SingleProductPage() {
-  const dispatch = useDispatch();
-  const send = (e) => {
-    // console.log(e);
-    dispatch(ADD(e));
+  const addtoCartDataArray =
+    JSON.parse(localStorage.getItem("selectedData")) || [];
+
+  const getLocalCartData = (data) => {
+    // e.preventDefault();
+    addtoCartDataArray.push(data);
+    console.log(addtoCartDataArray);
+    localStorage.setItem("selectedData", JSON.stringify(addtoCartDataArray));
   };
 
   const [data, setData] = useState([]);
@@ -123,7 +127,10 @@ function SingleProductPage() {
                 <div className="hidden content">
                   <i className="shop icon"></i>
                 </div>
-                <button onClick={send(data?.data)} className="visible content">
+                <button
+                  onClick={getLocalCartData(data?.data)}
+                  className="visible content"
+                >
                   Add to Cart
                 </button>
               </div>

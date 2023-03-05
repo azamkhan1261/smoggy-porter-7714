@@ -30,9 +30,7 @@ function Cartsidebar() {
     //     </ul>
     //   </nav>
     // </div>
-    <>
-    
-    </>
+    <></>
   );
 }
 

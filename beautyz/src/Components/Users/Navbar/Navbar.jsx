@@ -10,7 +10,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { IoBagOutline } from "react-icons/io5";
 // import { ShoppingBag } from "@mui/icons-material";
 // import { TbIdBadge2 } from "react-icons/io5";
-import { Heading } from "@chakra-ui/react";
+import { Heading, Image } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
 import {
   Drawer,
@@ -32,8 +32,10 @@ const links = [
 ];
 
 const Navbar = () => {
-  const getdata = useSelector((state) => state.cartreducer.carts);
-  console.log(getdata);
+  const CartDataArray = JSON.parse(localStorage.getItem("selectedData")) || [];
+  console.log(CartDataArray);
+  // const getdata = useSelector((state) => state.cartreducer.carts);
+  // console.log(getdata);
   const navigate = useNavigate();
   const [howerState, setHowerState] = useState("");
   const [login, setLogin] = useState(false);
@@ -143,14 +145,14 @@ const Navbar = () => {
           <DrawerContent>
             <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
             <DrawerBody>
-              {/* <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p> */}
-              {getdata.length ? (
+              {CartDataArray.length > 0 ? (
                 <div>
-                  <Heading as="h2" size="2xl">
-                    In love with React & Next
-                  </Heading>
+                  {CartDataArray.map((el) => (
+                    <div>
+                      <img src={el.image} alt={el.name} />
+                      <p>name</p>
+                    </div>
+                  ))}
                 </div>
               ) : (
                 <Heading>
